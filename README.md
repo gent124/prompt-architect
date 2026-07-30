@@ -1,5 +1,7 @@
 # Prompt Architect
 
+[![skills.sh](https://skills.sh/b/gent124/prompt-architect)](https://skills.sh/gent124/prompt-architect)
+
 Turn rough developer requests into concise, outcome-focused prompts that autonomous coding agents can execute directly.
 
 Prompt Architect preserves the technical context that matters, removes premature implementation guesses, adds relevant engineering expectations, and defines observable success criteria.
