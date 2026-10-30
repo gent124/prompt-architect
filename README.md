@@ -6,9 +6,16 @@ Turn rough developer requests into concise, outcome-focused prompts that autonom
 
 Prompt Architect preserves the technical context that matters, removes premature implementation guesses, adds relevant engineering expectations, and defines observable success criteria.
 
+This repository also includes Clear Task Prompts for rewriting requests in any domain.
+
+| Skill | Use it for |
+| --- | --- |
+| [prompt-architect](SKILL.md) | Coding and engineering prompts for autonomous agents. |
+| [clear-task-prompts](skills/clear-task-prompts/SKILL.md) | Prompts for writing, research, analysis, planning, creative work, and coding. |
+
 ## Install
 
-Install with the open Agent Skills CLI:
+Install Prompt Architect with the open Agent Skills CLI:
 
 ```bash
 npx skills add gent124/prompt-architect
@@ -20,9 +27,32 @@ Install globally for Codex:
 npx skills add gent124/prompt-architect --global --agent codex --yes
 ```
 
-The skill follows the portable Agent Skills format and can also be installed for other agents supported by the Skills CLI.
+Both skills follow the portable Agent Skills format and can be installed for agents supported by the Skills CLI.
+
+Install Clear Task Prompts globally for Claude Code:
+
+```bash
+npx skills add gent124/prompt-architect --full-depth --skill clear-task-prompts --global --agent claude-code
+```
+
+For Codex, use `--agent codex` instead. To choose between both skills interactively:
+
+```bash
+npx skills add gent124/prompt-architect --full-depth
+```
+
+`--full-depth` includes the skill under `skills/` alongside the original root skill.
 
 ## Use
+
+For a general request, ask:
+
+```text
+Use clear-task-prompts to improve this request:
+write an email asking my landlord to repair the heating
+```
+
+Clear Task Prompts preserves your intent and constraints and returns a ready-to-use prompt without carrying out the underlying task.
 
 Ask your agent to rewrite or improve a coding prompt:
 
